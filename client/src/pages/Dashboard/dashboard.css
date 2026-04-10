@@ -1,0 +1,290 @@
+/* ===== DASHBOARD ===== */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+/* Greeting */
+.dash-greeting {
+  padding: 4px 0 0;
+}
+
+.dash-greeting__date {
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+
+.dash-greeting__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Active workout banner */
+.dash-active {
+  background: var(--terra-bg);
+  border: 1.5px solid var(--terra-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  animation: fadeUp 0.35s ease both;
+}
+
+.dash-active__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dash-active__name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-active__time {
+  font-size: 13px;
+  color: var(--terra);
+}
+
+/* Week strip */
+.dash-week {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dash-week__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-week__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dash-week__arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--text2);
+  transition: background 0.15s;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.dash-week__arrow:hover {
+  background: var(--cream);
+}
+
+.dash-week__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  min-width: 100px;
+  text-align: center;
+}
+
+.dash-week__days {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.dash-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.dash-day__label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  text-transform: uppercase;
+}
+
+.dash-day__circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--cream);
+  color: var(--text);
+  transition: all 0.15s;
+}
+
+.dash-day--today .dash-day__circle {
+  border: 2px solid var(--terra);
+  background: var(--surface);
+}
+
+.dash-day--done .dash-day__circle {
+  background: var(--olive);
+  color: #fff;
+}
+
+.dash-day--done.dash-day--today .dash-day__circle {
+  border: 2px solid var(--terra);
+  background: var(--olive);
+  color: #fff;
+}
+
+/* Today's schedule */
+.dash-schedule__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.dash-schedule__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 16px 20px;
+  animation: fadeUp 0.35s ease both;
+}
+
+.dash-schedule__item + .dash-schedule__item {
+  margin-top: 8px;
+}
+
+.dash-schedule__name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Stats row */
+.dash-stats {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.dash-stats::-webkit-scrollbar {
+  display: none;
+}
+
+.dash-stat {
+  flex: 1;
+  min-width: 130px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeUp 0.35s ease both;
+}
+
+.dash-stat__icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.dash-stat__value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.dash-stat__label {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.3;
+}
+
+/* PRs section */
+.dash-prs__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.dash-pr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--cream);
+}
+
+.dash-pr:last-child {
+  border-bottom: none;
+}
+
+.dash-pr__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dash-pr__exercise {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-pr__type {
+  font-size: 12px;
+  color: var(--text2);
+}
+
+.dash-pr__value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--terra);
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .dash-stats {
+    overflow-x: visible;
+  }
+
+  .dash-stat {
+    min-width: 0;
+  }
+}

@@ -1,0 +1,101 @@
+/* ===== REST TIMER (floating) ===== */
+.rest-timer-float {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 24px rgba(44, 36, 32, 0.35);
+  z-index: 150;
+  animation: fadeUp 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: calc(100vw - 24px);
+}
+
+.rest-timer-float--done {
+  background: var(--olive);
+}
+
+/* Ring container */
+.rest-timer-float__ring {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.rest-timer-float__ring svg {
+  display: block;
+}
+
+.rest-timer-float__progress {
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.rest-timer-float__time {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.rest-timer-float__label {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Action buttons */
+.rest-timer-float__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rest-timer-float__btn {
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.rest-timer-float__btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.rest-timer-float__btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.rest-timer-float__btn--close {
+  width: 32px;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* ===== WORKOUT TIMER ===== */
+.workout-timer {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,33 @@
+/* ===== WORKOUT TABS ===== */
+.workout-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  margin-bottom: 16px;
+}
+
+.workout-tabs__btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.workout-tabs__btn--active {
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(44, 36, 32, 0.08);
+}
+
+.workout-tabs__btn:hover:not(.workout-tabs__btn--active) {
+  color: var(--text);
+}

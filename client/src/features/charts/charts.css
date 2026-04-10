@@ -1,0 +1,195 @@
+/* ===== EXERCISE CHART ===== */
+.exercise-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exercise-chart__select {
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--cream);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+
+.exercise-chart__select:focus {
+  border-color: var(--terra);
+}
+
+.exercise-chart__periods {
+  display: flex;
+  gap: 4px;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+}
+
+.exercise-chart__period-btn {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text2);
+  transition: background 0.15s, color 0.15s;
+}
+
+.exercise-chart__period-btn--active {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(44, 36, 32, 0.08);
+}
+
+.exercise-chart__wrapper {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 16px 8px 8px;
+}
+
+/* ===== BODY CHART ===== */
+.body-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.body-chart__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.body-chart__toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.body-chart__toggle input[type='checkbox'] {
+  accent-color: var(--terra);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.body-chart__toggle--active {
+  color: var(--text);
+}
+
+.body-chart__swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.body-chart__wrapper {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 16px 8px 8px;
+}
+
+/* ===== PERSONAL RECORDS ===== */
+.personal-records {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.personal-records__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.pr-card__header {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.pr-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pr-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text2);
+}
+
+.pr-card__value {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pr-card__date {
+  font-size: 12px;
+  color: var(--text2);
+  margin-left: 6px;
+}
+
+/* ===== CHART SECTION HEADER ===== */
+.chart-section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* ===== Recharts overrides ===== */
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.chart-tooltip {
+  background: var(--surface);
+  border: 1px solid var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.chart-tooltip__date {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--text2);
+}
+
+.chart-tooltip__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.6;
+}
+
+.chart-tooltip__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

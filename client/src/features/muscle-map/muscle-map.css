@@ -1,0 +1,155 @@
+/* ===== MUSCLE BODY SVG ===== */
+.muscle-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.muscle-body__svg {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+}
+
+.muscle-body__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Muscle regions */
+.muscle-region {
+  cursor: pointer;
+  transition: fill 0.3s ease, fill-opacity 0.3s ease;
+}
+
+.muscle-region:hover {
+  fill-opacity: 0.9 !important;
+  filter: brightness(1.08);
+}
+
+.muscle-region:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 1px;
+}
+
+/* ===== WEEKLY HEAT MAP ===== */
+.heatmap-card {
+  padding: 20px;
+}
+
+.heatmap-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.heatmap-bodies {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.heatmap-loading {
+  text-align: center;
+  color: var(--text2);
+  padding: 32px 0;
+  font-size: 14px;
+}
+
+/* Legend */
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.heatmap-legend__bar {
+  display: flex;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 120px;
+}
+
+.heatmap-legend__segment {
+  flex: 1;
+}
+
+.heatmap-legend__label {
+  font-size: 11px;
+  color: var(--text2);
+  white-space: nowrap;
+}
+
+/* Tooltip */
+.heatmap-tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  cursor: pointer;
+  animation: fadeUp 0.2s ease both;
+}
+
+.heatmap-tooltip strong {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.heatmap-tooltip span {
+  color: var(--text2);
+  font-size: 13px;
+}
+
+/* ===== EXERCISE MUSCLE MAP ===== */
+.exercise-muscle-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.exercise-muscle-map .muscle-body__svg {
+  max-width: 140px;
+}
+
+.exercise-muscle-map__labels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.exercise-muscle-map__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exercise-muscle-map__heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.exercise-muscle-map__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

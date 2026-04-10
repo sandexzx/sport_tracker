@@ -1,0 +1,94 @@
+/* ===== TOOLTIP ===== */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip-trigger {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text2);
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.tooltip-trigger:hover {
+  background: var(--cream);
+  color: var(--text);
+}
+
+/* Popover */
+.tooltip-popover {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow), 0 4px 12px rgba(44, 36, 32, 0.12);
+  min-width: 200px;
+  max-width: 280px;
+  z-index: 300;
+  animation: fadeIn 0.15s ease;
+  white-space: normal;
+}
+
+/* Arrow */
+.tooltip-popover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--surface);
+  filter: drop-shadow(0 1px 1px rgba(44, 36, 32, 0.08));
+}
+
+/* Flip to bottom when near top */
+.tooltip-popover--bottom {
+  bottom: auto;
+  top: calc(100% + 8px);
+}
+
+.tooltip-popover--bottom::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: var(--surface);
+}
+
+.tooltip-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text2);
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.15s;
+  padding: 0;
+}
+
+.tooltip-close:hover {
+  background: var(--cream);
+}

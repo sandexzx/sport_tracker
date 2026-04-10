@@ -1,0 +1,16 @@
+:root {
+  --bg: #faf6f1;
+  --surface: #ffffff;
+  --cream: #f0e9df;
+  --terra: #c4704b;
+  --terra-light: #e8a888;
+  --terra-bg: #fdf0e9;
+  --olive: #7a8a6e;
+  --olive-bg: #eef2eb;
+  --text: #2c2420;
+  --text2: #9a8e84;
+  --shadow: 0 1px 3px rgba(44,36,32,0.06), 0 6px 16px rgba(44,36,32,0.04);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+}

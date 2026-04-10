@@ -1,0 +1,167 @@
+/* ===== APP SHELL ===== */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-main {
+  flex: 1;
+  padding: 16px 16px 80px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== BOTTOM NAV (mobile) ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--surface);
+  box-shadow: 0 -1px 8px rgba(44, 36, 32, 0.08);
+  padding: 8px 0;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  z-index: 100;
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  color: var(--text2);
+  transition: color 0.15s;
+  min-width: 56px;
+}
+
+.bottom-nav__item--active {
+  color: var(--terra);
+}
+
+.bottom-nav__icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.bottom-nav__label {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* ===== SIDEBAR (desktop) ===== */
+.sidebar {
+  display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+
+  .app-main {
+    padding: 24px 32px 40px;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--surface);
+    box-shadow: 1px 0 8px rgba(44, 36, 32, 0.06);
+    padding: 20px 12px;
+    flex-shrink: 0;
+    transition: width 0.2s ease;
+  }
+
+  .sidebar--collapsed {
+    width: 68px;
+  }
+
+  .sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px 20px;
+  }
+
+  .sidebar__title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .sidebar__toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--text2);
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+
+  .sidebar__toggle:hover {
+    background: var(--cream);
+  }
+
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--text2);
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+
+  .sidebar__link:hover {
+    background: var(--cream);
+    color: var(--text);
+  }
+
+  .sidebar__link--active {
+    color: var(--terra);
+    background: var(--terra-bg);
+  }
+
+  .sidebar__link--active:hover {
+    background: var(--terra-bg);
+    color: var(--terra);
+  }
+
+  .sidebar__icon {
+    font-size: 20px;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+  }
+
+  .sidebar__label {
+    overflow: hidden;
+  }
+}
